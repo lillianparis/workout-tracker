@@ -1,5 +1,6 @@
 
 # Workout Tracker
+
 # Table of Contents 
 
 *[Description](#description) 
@@ -22,7 +23,7 @@
 
 
 ## Description
-This ...
+This webpage features a workout tracker, that will implement a mongoose database with a mongoose schema and handle routes with express.
 
 
 ## Installation
@@ -33,7 +34,7 @@ npm install
 ```
 
 ## Usage
-It's ...
+As a user, I want to be able to view, create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I want to also be able to track a name, type, weight, sets, reps, and duration of exercises. If the exercise is a cardio exercise, I should be able to track my distance traveled.
 
 ## Contribution
 This repository was created by: Lillian Paris.
