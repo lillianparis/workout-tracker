@@ -2,7 +2,7 @@ let mongoose = require("mongoose");
 let db = require("../models");
 
 mongoose.connect(
-  process.env.MONGO_URI || "mongodb://localhost/hidden-falls-39631", 
+  process.env.MONGO_URI || "mongodb://localhost/workout", 
   {
   useNewUrlParser: true,
   useFindAndModify: false,
