@@ -1,6 +1,6 @@
 // using layout code 
-const express = require("express");
-const mongojs = require("mongojs");
+// const express = require("express");
+// const mongojs = require("mongojs");
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
@@ -17,7 +17,21 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
     useNewUrlParser: true,
-    useFindAndModify: false
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+});
+// Html routes
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
+app.get("/exercise", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/exercise.html"));
+});
+
+app.get("/stats", (req, res) => {
+    res.sendFile(path.join(__dirname, "./public/stats.html"));
 });
 
 app.use(require("./routes/api.js"));

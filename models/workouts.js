@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 // Numbers don't need a trim
 const workoutSchema = new Schema({
     day: {
-        type: Date(),
+        type: Date,
         trim: true,
     },
     exercises: [
