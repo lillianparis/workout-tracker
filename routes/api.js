@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const Workout = require("../models");
+const {Workout} = require("../models");
 
 // Grab workouts
 
@@ -27,8 +27,8 @@ router.post("/api/workouts", ({ body }, res) => {
 });
 // Backend uses : and variable, front end uses + and variable
 // update one workout
-router.put("/api/workouts/:id", ({ body }, res) => {
-    Workout.updateOne({ _id: req.params.id }, { exercises: body })
+router.put("/api/workouts/:id", (req, res) => {
+    Workout.updateOne({ _id: req.params.id }, { exercises: req.body })
         .then(function (dbImage) {
             res.json(dbImage);
         });
