@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
-});
+}).then(() => {console.log("Connected")}).catch((e) => console.log(e)); 
 // Html routes
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "./public/index.html"));
