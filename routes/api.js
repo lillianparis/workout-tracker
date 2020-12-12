@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-const Workout = require("../models/workouts.js");
+const Workout = require("../models");
 
 // Grab workouts
 
